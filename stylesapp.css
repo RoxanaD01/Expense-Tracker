@@ -337,6 +337,7 @@ footer {
     }
 
     #expenseList {
+        overflow-y: auto;
         height: 200px;            /* Adjust height for scrolling */
     }
 
@@ -345,8 +346,9 @@ footer {
         padding: 15px;
     }
 
-    .modal {
-        width: 85%;
+    .modal-content {
+        margin-top: 35%;
+        width: 90%;
         padding: 10px;
     }
 }
