@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styleslogin.css">
+</head>
+<body>
+    
+    <!--Header: TITLE -->
+
+    <header>
+        <p class="title">Expense Tracker</p>
+    </header>
+
+    <!-- CONTAINER: text, buttons: Log in & Sign Up and the modal -->
+
+    <div class="containerBox">
+
+        <div class="text-box">
+            <p><span>Welcome to Expense Tracker!</span>
+                Take control of your finances with ease. Log in to track your expenses, view summaries, and manage your budget like never before. New here? Sign up to get started!
+            </p>
+            <p><span>Log In</span>
+                Already have an account? Log in to access your personalized expense dashboard and keep your finances on track.
+            </p>
+            <p><span>Sign Up</span>
+                Create a free account to start tracking your expenses, view detailed reports, and stay organized with our intuitive financial tools.
+            </p>
+        </div>
+
+        <div class="btn-box">
+            <button id="login-btn" aria-label="Log In Button">Log In</button>
+            <button id="signup-btn" aria-label="Sign Up Button">Sign Up</button>
+        </div>
+
+        <!-- User Authentication - LOG IN or SIGN UP -->
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-close">
+                <span class="close-btn" aria-label="Close Button">&times;</span>
+            </div>
+            <h2 id="modal-text" class="modalText"></h2>
+            <div id="modal-elements">
+                <!-- here will be the Form  -->
+            </div>
+        </div>
+        <div class="overlay hidden"> 
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Expense Tracker</p>
+    </footer>
+
+    <script src="scriptlogin.js"></script>
+</body>
+</html>

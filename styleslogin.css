@@ -1,0 +1,294 @@
+:root {
+    --primary-color: #FF6F20;
+    --secondary-color: #FF9E45;
+    --light-orange: rgba(255, 223, 186, 0.5);
+    --darker-orange: #eea849;
+    --accent-orange: #FFC107;
+    --text-color: #333333;
+    --background-light: #FFF7ED;
+    --border-color: #ddd;
+    --input-border: #FF9E45;
+    --error: #FF0000;
+    --success-color: #4CAF50;
+    --info-color: #2196F3;
+    --white-color: #ffffff;
+    --black-color: #000000;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    background-color: var(--background-light);
+}
+
+/** HEADER */
+
+header {
+    background: linear-gradient(to bottom, var(--primary-color), rgba(255, 111, 32, 0.5));
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-family: "Bona Nova SC", serif; 
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+/* * MAIN CONTAINER */
+
+.containerBox {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 100%;
+    background: radial-gradient(circle, var(--white-color), var(--light-orange));
+    position: relative;
+    margin-bottom: 10px;
+}
+.text-box {
+    margin: 10px;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: ridge 2px var(--primary-color);
+}
+
+.text-box p {
+    padding: 10px;
+}
+
+.text-box p > span {
+   font-weight: bolder;
+   display: block;
+   margin: 5px 0px;
+}
+.btn-box {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+button {
+    background: linear-gradient(to right, var(--primary-color) 0%, var(--darker-orange) 51%, var(--primary-color)  100%);
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition:  0.3s ease;
+  }
+  
+button:hover {
+    background: var(--darker-orange);
+}
+
+/* * MODAL */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, var(--white-color), rgb(240, 184, 116));
+    max-width: 350px;
+    width: 90%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none; 
+    z-index: 10;
+    text-align: center;
+}
+
+.modalText {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; 
+    z-index: 5;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.password-container {
+    position: relative;
+    width: 100%; 
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 0.9rem;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+::placeholder {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.message {
+    font-size: 0.85rem;
+    color: var(--info-color);
+    margin-top: -5px;
+    padding-bottom: 10px;
+}
+
+/* * Log In and Sign Up */
+ 
+.modal:not(.hidden),
+.overlay:not(.hidden) {
+    display: block;
+}
+
+/** Show/Hide Password */
+.eye-icon, .eye-icon2 {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.eye-icon:hover, .eye-icon2:hover {
+    opacity: 1;
+}
+  
+/** Close button */
+
+.modal-close .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/** Forgot Password */
+
+.form-link  {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+}
+
+.backToLogin {
+    font-weight: 600;
+    border-radius: 5%; 
+    color: black;
+    text-decoration: none;
+}
+
+#password {
+    padding-right: 30px; 
+    position: relative;
+}
+
+#newPassword {
+    padding-right: 30px; 
+    position: relative;
+}
+
+/* * FOOTER */
+
+footer {
+    background: linear-gradient(to bottom, var(--primary-color), rgba(255, 111, 32, 0.5));
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .modal {
+        width: 90%;
+        padding: 15px; /*from 25*/
+    }
+
+    .title {
+        font-size: 24px; /*from 32*/
+    }
+
+    .text-box {
+        width: 90%; 
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .modal {
+        max-width: 70%;
+        padding: 20px; 
+    }
+
+    .title {
+        font-size: 28px; 
+    }
+
+    .text-box {
+        width: 75%; 
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 18px; 
+    }
+
+    .containerBox {
+        flex-direction: column; 
+        padding: 20px;
+    }
+}
